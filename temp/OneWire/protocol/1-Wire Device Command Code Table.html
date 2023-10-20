@@ -1,0 +1,3368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+  <style type="text/css"><!-- .dev { 	background-color: #CCFFFF; } .mem { 	background-color: #9999FF; } .nam { 	background-color: #99FFFF; } .ovdr { 	background-color: #FFCC99; } .rom { 	background-color: #FFCCCC; } .undoc { 	background-color: #CC66CC; } table { 	background-color: #CCCCFF; } td { 	text-align: left; } th { 	font-weight: bold; 	text-align: center; } --></style>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=windows-1252">
+  <title>1-Wire Device Command Code Table</title>
+<link href="data:text/css,%5Bid*%3D'google_ads_iframe'%5D%2C%5Bid*%3D'taboola-'%5D%2C.taboolaHeight%2C.taboola-placeholder%2C%23credential_picker_container%2C%23credentials-picker-container%2C%23credential_picker_iframe%2C%5Bid*%3D'google-one-tap-iframe'%5D%2C%23google-one-tap-popup-container%2C.google-one-tap-modal-div%7Bdisplay%3Anone!important%3Bmin-height%3A0!important%3Bheight%3A0!important%3B%7D" rel="stylesheet" type="text/css"></head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(173, 216, 230);" dir="ltr" lang="en-US">
+<table style="background-color: rgb(221, 221, 221); width: 100%;" border="1">
+<thead> <tr>
+<td align="left"><a href="http://owfs.sourceforge.net/index.html"><b>OWFS</b></a></td>
+<td align="center"><a href="http://sourceforge.net/projects/owfs/">SF.net
+project page</a></td>
+<td align="center"><a href="http://www.owfs.org/">New OWFS Website!</a></td>
+<td align="center">by <a href="mailto:palfille@earthlink.net">Paul
+H Alfille</a></td>
+<td align="right"><a href="http://sourceforge.net/"><img src="1-Wire%20Device%20Command%20Code%20Table_bestanden/sflogo.png" alt="SourceForge.net Logo" width="88" height="31" border="0"></a></td>
+</tr>
+</thead> <tbody>
+</tbody>
+</table>
+<!--
+<address>&copy; 2003 Paul H. Alfille and The owfs Team</address>
+<address>$Id: top.ssi,v 1.3 2006/06/17 21:55:42 alfille Exp $</address>
+-->
+
+<h2 align="center">Common 1-wire command codes <i>(<a href="https://owfs.sourceforge.net/commands.html">see full table</a>)</i></h2>
+<h3 align="center">Sort by: <a href="https://owfs.sourceforge.net/simple_commands.html">Device number</a>,
+<a href="https://owfs.sourceforge.net/simple_ibutton.html">iButton</a> or <a href="https://owfs.sourceforge.net/simple_family.html">Family code</a></h3>
+<table style="width: 3392px; background-color: rgb(204, 204, 255);" cellspacing="3" cellpadding="2" border="1">
+  <colgroup><col width="46"> <col width="53"> <col width="95"> <col width="49">
+  <col width="60"> <col width="38"> <col width="34"> <col width="34">
+  <col width="35"> <col width="35"> <col width="30"> <col width="30">
+  <col width="34"> <col width="33"> <col width="34"> <col width="33">
+  <col width="34"> <col width="34"> <col width="29"> <col width="34">
+  <col width="34"> <col width="40"> <col width="33"> <col width="40">
+  <col width="46"> <col width="29"> <col width="56"> <col width="33">
+  <col width="43"> <col width="31"> <col width="49"> <col width="33">
+  <col width="29"> <col width="49"> <col width="33"> <col width="32">
+  <col width="34"> <col width="40"> <col width="49"> <col width="37">
+  <col width="45"> <col width="29"> <col width="31"> <col width="29">
+  <col width="29"> <col width="34"> <col width="38"> <col width="38">
+  <col width="38"> <col width="62"> <col width="67"> <col width="29">
+  <col width="29"> <col width="29"> <col width="45"> <col width="47">
+  <col width="35"> <col width="35"> <col width="29"> <col width="29">
+  <col width="49"> <col width="28"> <col width="36"> <col width="29">
+  <col width="64"> <col width="28"> <col width="48"> <col width="49">
+  <col width="37"> <col width="28"> <col width="42"> <col width="29">
+  <col width="38"> <col width="50"> </colgroup><tbody>
+    <tr>
+      <th class="dev">Device</th>
+      <th class="dev">iButton</th>
+      <th class="nam">Name</th>
+      <th class="dev">Family</th>
+      <th class="mem">Memory</th>
+      <th class="mem">CRC</th>
+      <th>0F</th>
+      <th class="rom">33</th>
+      <th>33</th>
+      <th class="rom">39</th>
+      <th class="ovdr">3C</th>
+      <th>3C</th>
+      <th>44</th>
+      <th>48</th>
+      <th>4E</th>
+      <th class="rom">55</th>
+      <th>55</th>
+      <th>5A</th>
+      <th>63</th>
+      <th class="ovdr">69</th>
+      <th>69</th>
+      <th>6C</th>
+      <th>96</th>
+      <th>99</th>
+      <th>A3</th>
+      <th class="rom">A5</th>
+      <th>A5</th>
+      <th>AA</th>
+      <th>B4</th>
+      <th>B5</th>
+      <th>B8</th>
+      <th>BE</th>
+      <th>C3</th>
+      <th class="rom">CC</th>
+      <th>CC</th>
+      <th class="rom">EC</th>
+      <th class="rom">F0</th>
+      <th>F0</th>
+      <th>F3</th>
+      <th>F5</th>
+    </tr>
+    <tr>
+      <td class="dev">1425</td>
+      <td class="dev">1991</td>
+      <td class="nam">multikey 1153bit secure</td>
+      <td class="dev">02</td>
+      <td class="mem">1152</td>
+      <td class="mem"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td>copy scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td>write pw</td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td>write scratch</td>
+      <td>write sub</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">1821</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">programmable digital thermostat and thermometer</td>
+      <td class="dev"><br>
+      </td>
+      <td class="mem"><br>
+      </td>
+      <td class="mem"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>read temp</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">1822</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">Econo Digital Thermometer</td>
+      <td class="dev">22</td>
+      <td class="mem"><br>
+      </td>
+      <td class="mem">8</td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>convert T</td>
+      <td>copy scratch</td>
+      <td>write scratch</td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr">write trim2<br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>power</td>
+      <td><br>
+      </td>
+      <td>recall EE</td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom">alarm search</td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">18B20</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">programmable resolution digital thermometer</td>
+      <td class="dev">28</td>
+      <td class="mem"><br>
+      </td>
+      <td class="mem">8</td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>convert T</td>
+      <td>copy scratch</td>
+      <td>write scratch</td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr">write trim2<br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>power</td>
+      <td><br>
+      </td>
+      <td>recall EE</td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom">alarm search</td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">18S20</td>
+      <td class="dev">1920</td>
+      <td class="nam">high precision digital thermometer</td>
+      <td class="dev">10</td>
+      <td class="mem"><br>
+      </td>
+      <td class="mem">8</td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>convert T</td>
+      <td>copy scratch</td>
+      <td>write scratch</td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr">write trim2<br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>power</td>
+      <td><br>
+      </td>
+      <td>recall EE</td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom">cond search</td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev"><br>
+      </td>
+      <td class="dev">1921<br>
+      </td>
+      <td class="nam">Thermachron</td>
+      <td class="dev">21</td>
+      <td class="mem">256*32</td>
+      <td class="mem">16</td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td>clear mem</td>
+      <td>convert T</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>copy scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td>CRC read mem</td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom">cond search</td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev"><br>
+      </td>
+      <td class="dev">1962S<br>
+      </td>
+      <td class="nam">1k protected eeprom SHA-1</td>
+      <td class="dev"><br>
+      </td>
+      <td class="mem">150*32</td>
+      <td class="mem">16</td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td>compute next</td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>copy scratch</td>
+      <td>load first</td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>refresh scratch</td>
+      <td class="rom">resume</td>
+      <td>read auth page</td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev"><br>
+      </td>
+      <td class="dev">1963L<br>
+      </td>
+      <td class="nam">4k Monetary<br>
+      </td>
+      <td class="dev">1A<br>
+      </td>
+      <td class="mem">256*32</td>
+      <td class="mem">16</td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td>copy scratch</td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td>read mem+<br>
+counter<br>
+      </td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev"><br>
+      </td>
+      <td class="dev">1977<br>
+      </td>
+      <td class="nam">Password protected 32k eeprom</td>
+      <td class="dev">37</td>
+      <td class="mem">512*64</td>
+      <td class="mem">16</td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td>pw read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>pw copy scratch</td>
+      <td><br>
+      </td>
+      <td class="rom">resume</td>
+      <td><br>
+      </td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>pw verify</td>
+      <td class="rom">skip</td>
+      <td>version</td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev"><br>
+      </td>
+      <td class="dev">1992<br>
+      </td>
+      <td class="nam">1k memory ibutton</td>
+      <td class="dev">08</td>
+      <td class="mem">4*32</td>
+      <td class="mem"><br>
+      </td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>copy scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev"><br>
+      </td>
+      <td class="dev">1993<br>
+      </td>
+      <td class="nam">4k memory ibutton</td>
+      <td class="dev">06</td>
+      <td class="mem">16*32</td>
+      <td class="mem"><br>
+      </td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>copy scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev"><br>
+      </td>
+      <td class="dev">1995<br>
+      </td>
+      <td class="nam">16k memory ibutton</td>
+      <td class="dev">0A</td>
+      <td class="mem">64*32</td>
+      <td class="mem"><br>
+      </td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>copy scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev"><br>
+      </td>
+      <td class="dev">1996<br>
+      </td>
+      <td class="nam">64k memory ibutton</td>
+      <td class="dev">0C</td>
+      <td class="mem">256*32</td>
+      <td class="mem"><br>
+      </td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>copy scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2401</td>
+      <td class="dev">1990A</td>
+      <td class="nam">Silicon Serial Number</td>
+      <td class="dev">01</td>
+      <td class="mem"><br>
+      </td>
+      <td class="mem"><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2404</td>
+      <td class="dev">1994</td>
+      <td class="nam">econoram time chip</td>
+      <td class="dev">04</td>
+      <td class="mem">16*32</td>
+      <td class="mem"><br>
+      </td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>copy scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom">cond search</td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2404S</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">dual port plus time</td>
+      <td class="dev">84</td>
+      <td class="mem">16*32</td>
+      <td class="mem"><br>
+      </td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>copy scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom">cond search</td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2405</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">Addresable Switch</td>
+      <td class="dev">05</td>
+      <td class="mem"><br>
+      </td>
+      <td class="mem"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom">cond search</td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2406</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">dual addressable switch plus 1k memory</td>
+      <td class="dev">12</td>
+      <td class="mem">4*32</td>
+      <td class="mem">16</td>
+      <td>write mem</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>write status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td>ext read mem</td>
+      <td>read status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom">cond search</td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td>channel access</td>
+    </tr>
+    <tr>
+      <td class="dev">2407</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">dual addressable switch plus 1k memory</td>
+      <td class="dev">12</td>
+      <td class="mem">4*32</td>
+      <td class="mem">16</td>
+      <td>write mem</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>write status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td>ext read mem</td>
+      <td>read status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom">cond search</td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td>channel access</td>
+    </tr>
+    <tr>
+      <td class="dev">2408</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">8-channel addressable switch</td>
+      <td class="dev">29</td>
+      <td class="mem"><br>
+      </td>
+      <td class="mem"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td>write channel</td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">resume</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>reset latch</td>
+      <td class="rom">skip</td>
+      <td>write cond</td>
+      <td class="rom">cond search</td>
+      <td class="rom">search rom</td>
+      <td>read PIO</td>
+      <td><br>
+      </td>
+      <td>read channel</td>
+    </tr>
+    <tr>
+      <td class="dev">2409</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">microlan coupler</td>
+      <td class="dev">1F</td>
+      <td class="mem"><br>
+      </td>
+      <td class="mem"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td>smart-on aux</td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td>status</td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>discharge</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td>dir-on main</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td>smart-on main</td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2411</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">silicom serial number Vcc input</td>
+      <td class="dev">01</td>
+      <td class="mem"><br>
+      </td>
+      <td class="mem"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2415</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">time chip</td>
+      <td class="dev">24</td>
+      <td class="mem"><br>
+      </td>
+      <td class="mem"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>write clock</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2417</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">time chip with interrupt</td>
+      <td class="dev">27</td>
+      <td class="mem"><br>
+      </td>
+      <td class="mem"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>write clock</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2422</td>
+      <td class="dev">1922L<br>
+1922T<br>
+1923<br>
+      </td>
+      <td class="nam">Temperature Logger 8k mem</td>
+      <td class="dev">41</td>
+      <td class="mem">384*32</td>
+      <td class="mem"><br>
+      </td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td>pw stop mess</td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>convert T</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td>pw read mem</td>
+      <td><br>
+      </td>
+      <td>pw clear</td>
+      <td>pw copy scratch</td>
+      <td><br>
+      </td>
+      <td class="rom">resume</td>
+      <td><br>
+      </td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td>pw start miss</td>
+      <td class="rom">cond search</td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2423</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">4k ram with counter</td>
+      <td class="dev">1D</td>
+      <td class="mem">16*256</td>
+      <td class="mem">16</td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td>copy scratch</td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td>read mem + counter</td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2430A</td>
+      <td class="dev">1971</td>
+      <td class="nam">256 eeprom</td>
+      <td class="dev">14</td>
+      <td class="mem">1*32</td>
+      <td class="mem"><br>
+      </td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>copy scratch</td>
+      <td>copy/lock</td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>write app</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>read app</td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2431</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">1k eeprom</td>
+      <td class="dev">2D</td>
+      <td class="mem">4*32</td>
+      <td class="mem">16</td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>copy scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">resume
+      </td>
+      <td><br>
+      </td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2432</td>
+      <td class="dev">1961S</td>
+      <td class="nam">1k protected eeprom with SHA-1</td>
+      <td class="dev">33</td>
+      <td class="mem">4*256</td>
+      <td class="mem"><br>
+      </td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td>compute next</td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>copy scratch</td>
+      <td>load first</td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">resume</td>
+      <td>read auth page</td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2433</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">4k eeprom</td>
+      <td class="dev">23</td>
+      <td class="mem">16*32</td>
+      <td class="mem">16</td>
+      <td>write scratch</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>copy scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2438</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">smart battery monitor</td>
+      <td class="dev">26</td>
+      <td class="mem">8*8</td>
+      <td class="mem">8</td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>convert T</td>
+      <td>copy scratch</td>
+      <td>write scratch</td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>convert V</td>
+      <td><br>
+      </td>
+      <td>recall EE</td>
+      <td>read scratch</td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2450</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">quad a/d converter</td>
+      <td class="dev">20</td>
+      <td class="mem">4*8</td>
+      <td class="mem">16</td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td>convert V</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>write mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom">cond search</td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2502</td>
+      <td class="dev">1982</td>
+      <td class="nam">1k add-only memory</td>
+      <td class="dev">09</td>
+      <td class="mem">4*32</td>
+      <td class="mem">8</td>
+      <td>write mem</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>write status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>read status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>CRC read data</td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2502-E48<br>
+2502-UNW<br>
+      </td>
+      <td class="dev">1982U<br>
+      </td>
+      <td class="nam">48 bit node address chip</td>
+      <td class="dev">89</td>
+      <td class="mem">4*32</td>
+      <td class="mem">8</td>
+      <td>write mem</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>write status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>read status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>CRC read data</td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2505</td>
+      <td class="dev">1985</td>
+      <td class="nam">16k add-only memory</td>
+      <td class="dev">0B</td>
+      <td class="mem">64*256</td>
+      <td class="mem">16</td>
+      <td>write mem</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>write status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td>ext read mem</td>
+      <td>read status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td>speed write</td>
+      <td>speed write status</td>
+    </tr>
+    <tr>
+      <td class="dev">2505-UNW</td>
+      <td class="dev">1985U</td>
+      <td class="nam">16k add-only<br>
+uniqueware<br>
+      <br>
+      </td>
+      <td class="dev">8B</td>
+      <td class="mem">64*256</td>
+      <td class="mem">16</td>
+      <td>write mem</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>write status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td>ext read mem</td>
+      <td>read status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td>speed write</td>
+      <td>speed write status</td>
+    </tr>
+    <tr>
+      <td style="width: 46px; background-color: rgb(204, 255, 255); text-align: left; vertical-align: middle;" sdval="2506" sdnum="1033;">2506</td>
+      <td class="dev">1986</td>
+      <td class="nam">64k add-only&nbsp; memory<br>
+      </td>
+      <td class="dev">0F</td>
+      <td class="mem">256*32</td>
+      <td class="mem"><br>
+      </td>
+      <td>write mem</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>write status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td>ext read mem</td>
+      <td>read status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td>speed write</td>
+      <td>speed write status</td>
+    </tr>
+    <tr>
+      <td class="dev" sdval="2506" sdnum="1033;">2506-UNW</td>
+      <td class="dev">1986U</td>
+      <td class="nam">64k add-only uniqueware<br>
+      </td>
+      <td class="dev">8F</td>
+      <td class="mem">256*32</td>
+      <td class="mem"><br>
+      </td>
+      <td>write mem</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>write status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td>ext read mem</td>
+      <td>read status</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td>read mem</td>
+      <td>speed write</td>
+      <td>speed write status</td>
+    </tr>
+    <tr>
+      <td class="dev">2720</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">efficient addressable single-cell rechargable
+lithium protection ic</td>
+      <td class="dev">31</td>
+      <td class="mem">256</td>
+      <td class="mem"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>copy data</td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td>read data</td>
+      <td>write data</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">resume</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>recall data</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2740</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">high precision coulomb counter</td>
+      <td class="dev">36</td>
+      <td class="mem">256</td>
+      <td class="mem"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td>read data</td>
+      <td>write data</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">resume</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2751</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">multichemistry battery fuel gauge</td>
+      <td class="dev">51</td>
+      <td class="mem">256</td>
+      <td class="mem"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>copy data</td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td>read data</td>
+      <td>write data</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>recall data</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2760</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">high-precision li+ battery monitor</td>
+      <td class="dev">30</td>
+      <td class="mem">256</td>
+      <td class="mem"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>copy data</td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td>read data</td>
+      <td>write data</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>swap</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>recall data</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2761</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">high precision li+ battery monitor</td>
+      <td class="dev">30</td>
+      <td class="mem">256</td>
+      <td class="mem"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>copy data</td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td>read data</td>
+      <td>write data</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>swap</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>recall data</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2762</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">high precision li+ battery monitor with alerts</td>
+      <td class="dev">30</td>
+      <td class="mem">256</td>
+      <td class="mem"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>copy data</td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr"><br>
+      </td>
+      <td>read data</td>
+      <td>write data</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>swap</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>recall data</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2770</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">battery monitor and charge controller</td>
+      <td class="dev">2E</td>
+      <td class="mem">256</td>
+      <td class="mem"><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom">read rom</td>
+      <td class="ovdr"><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>copy data</td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>refresh</td>
+      <td class="ovdr"><br>
+      </td>
+      <td>read data</td>
+      <td>write data</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td><br>
+      </td>
+      <td>swap</td>
+      <td><br>
+      </td>
+      <td>start charge</td>
+      <td>recall data</td>
+      <td>stop charge</td>
+      <td><br>
+      </td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="rom">search rom</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="dev">2890</td>
+      <td class="dev"><br>
+      </td>
+      <td class="nam">digital potentiometer</td>
+      <td class="dev">2C</td>
+      <td class="mem"><br>
+      </td>
+      <td class="mem"><br>
+      </td>
+      <td>write pos</td>
+      <td class="rom">read rom</td>
+      <td><br>
+      </td>
+      <td class="rom"><br>
+      </td>
+      <td class="ovdr">ovdr skip</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="rom">match</td>
+      <td>write control</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td class="ovdr">ovdr match</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>decrement</td>
+      <td><br>
+      </td>
+      <td class="rom">resume</td>
+      <td><br>
+      </td>
+      <td>read control</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>increment</td>
+      <td class="rom">skip</td>
+      <td><br>
+      </td>
+      <td class="rom">cond search</td>
+      <td class="rom">search rom</td>
+      <td>read pos</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; background-color: rgb(204, 255, 255);">28E04-100<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(204, 255, 255);"><br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(153, 255, 255);">4k
+EEPROM withPIO<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(204, 255, 255);">1C<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(153, 153, 255);">4096<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(153, 153, 255);">16<br>
+      </td>
+      <td>write scratch<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 204);">read
+rom<br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 153);">ovdr
+skip<br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 204);">match<br>
+      </td>
+      <td>copy scratch<br>
+      </td>
+      <td>PIO write<br>
+      </td>
+      <td><br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 153);">ovdr
+match<br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 204);">resume<br>
+      </td>
+      <td>PIO pulse<br>
+      </td>
+      <td>read scratch<br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>reset latch<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 204);">skip<br>
+      </td>
+      <td>write register<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 204);">cond
+search<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 204);">search
+rom<br>
+      </td>
+      <td>read mem<br>
+      </td>
+      <td><br>
+      </td>
+      <td>PIO read<br>
+      </td>
+    </tr>
+    <tr>
+      <th class="dev">Device</th>
+      <th class="dev">iButton</th>
+      <th class="nam">Name</th>
+      <th class="dev">Family</th>
+      <th class="mem">Memory</th>
+      <th class="mem">CRC</th>
+      <th>0F</th>
+      <th class="rom">33</th>
+      <th>33</th>
+      <th class="rom">39</th>
+      <th class="ovdr">3C</th>
+      <th>3C</th>
+      <th>44</th>
+      <th>48</th>
+      <th>4E</th>
+      <th class="rom">55</th>
+      <th>55</th>
+      <th>5A</th>
+      <th>63</th>
+      <th class="ovdr">69</th>
+      <th>69</th>
+      <th>6C</th>
+      <th>96</th>
+      <th>99</th>
+      <th>A3</th>
+      <th class="rom">A5</th>
+      <th>A5</th>
+      <th>AA</th>
+      <th>B4</th>
+      <th>B5</th>
+      <th>B8</th>
+      <th>BE</th>
+      <th>C3</th>
+      <th class="rom">CC</th>
+      <th>CC</th>
+      <th class="rom">EC</th>
+      <th class="rom">F0</th>
+      <th>F0</th>
+      <th>F3</th>
+      <th>F5</th>
+    </tr>
+  </tbody>
+</table>
+<p style="margin-bottom: 0in;"><br>
+</p>
+<address>© 2003 Paul H. Alfille and The owfs Team</address>
+<address>$Id: simple_commands.html,v 1.20 2005/07/04 21:06:58 alfille Exp $</address>
+<p><br>
+<br>
+</p>
+
+
+</body></html>
